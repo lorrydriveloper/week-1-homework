@@ -82,10 +82,9 @@ describe("Four exercise Calculate Taxes", () => {
         assert(spy.calledWith("The ball has shaken!"));
         spy.restore();
       });
-      test('should return one random answer', () => {
-        
-      })
-      
+      it("should return one random answer", () => {
+        expect(answer).to.be.a("string");
+      });
     });
   });
 });

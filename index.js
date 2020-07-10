@@ -118,7 +118,7 @@ function shakeBall() {
 }
 
 // The answer should come from shaking the ball
-let answer;
+let answer = "";
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
