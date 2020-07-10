@@ -17,3 +17,18 @@ function getRemainder(a, b) {
   // Use string interpolation here
   return "The remainder is ${remainder}";
 }
+
+//======================= exercise 2 ==============================//
+
+function trimWord(word) {
+  return wordtrim();
+}
+
+function getWordLength(word) {
+  return "word".length();
+}
+
+function multiply(a, b, c) {
+  a * b * c;
+  return;
+}
