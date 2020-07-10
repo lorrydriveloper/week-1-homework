@@ -1,4 +1,6 @@
 // test here
+const helpers = require("./helpers");
+
 describe("First exercise Sintax errors", () => {
   describe("addNumbers function should return the sume of the 3 given numbers", () => {
     it("return the correct number", () => {
@@ -39,10 +41,35 @@ describe("Second exercise logic errors", () => {
   });
 });
 
-describe("concatenate functions should return the 3 words together and return and string", () => {
-  it("should return a well formated string", () => {
-    expect(concatenate("code", "your", "future")).to.equal("code your future");
-    expect(concatenate("I", "like", "pizza")).to.equal("I like pizza");
-    expect(concatenate("I", "am", 13)).to.equal("I am 13");
+describe("Third exercise Function output", () => {
+  describe("concatenate function should return the 3 words together and return and string", () => {
+    it("should return a well formated string", () => {
+      expect(concatenate("code", "your", "future")).to.equal(
+        "code your future"
+      );
+      expect(concatenate("I", "like", "pizza")).to.equal("I like pizza");
+      expect(concatenate("I", "am", 13)).to.equal("I am 13");
+    });
+  });
+});
+
+describe("Four exercise Calculate Taxes", () => {
+  describe("calculateSalesTax function should return the price given increased by 20%", () => {
+    it("should return the given number increased by 20%", () => {
+      expect(calculateSalesTax(15)).to.equal(18);
+      expect(calculateSalesTax(17.5)).to.equal(21);
+      expect(calculateSalesTax(34)).to.equal(40.8);
+    });
+  });
+
+  describe('formatCurrency should return the price formated as "£0.00"', () => {
+    it("should return the correct format", () => {
+      expect(formatCurrency(15)).to.equal("£18.00");
+    });
+    it("should call the function calculateSalesTax", () => {
+      let mySpy = chai.spy.on(window, "calculateSalesTax");
+      formatCurrency(15);
+      expect(mySpy).to.have.been.called();
+    });
   });
 });
