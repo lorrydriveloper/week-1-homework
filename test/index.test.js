@@ -32,9 +32,17 @@ describe("Second exercise logic errors", () => {
       expect(getWordLength("A wild sentence appeared!")).to.equal(25);
     });
   });
-  describe("multiply functions should return the multiplication of the given 3 numbers", () => {
+  describe("multiply function should return the multiplication of the given 3 numbers", () => {
     it("should return the result of multiply 3 given numbers", () => {
       expect(multiply(2, 3, 6)).to.equal(36);
     });
+  });
+});
+
+describe("concatenate functions should return the 3 words together and return and string", () => {
+  it("should return a well formated string", () => {
+    expect(concatenate("code", "your", "future")).to.equal("code your future");
+    expect(concatenate("I", "like", "pizza")).to.equal("I like pizza");
+    expect(concatenate("I", "am", 13)).to.equal("I am 13");
   });
 });
