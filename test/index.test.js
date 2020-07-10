@@ -20,3 +20,21 @@ describe("First exercise Sintax errors", () => {
     });
   });
 });
+
+describe("Second exercise logic errors", () => {
+  describe("trimWord function should return a string without space at the beginning and end", () => {
+    it("should return the string cleaned of space string", () => {
+      expect(trimWord("  CodeYourFuture ")).to.equal("CodeYourFuture");
+    });
+  });
+  describe("getWordLength function should return the length of the given string", () => {
+    it("should return the word length", () => {
+      expect(getWordLength("A wild sentence appeared!")).to.equal(25);
+    });
+  });
+  describe("multiply functions should return the multiplication of the given 3 numbers", () => {
+    it("should return the result of multiply 3 given numbers", () => {
+      expect(multiply(2, 3, 6)).to.equal(36);
+    });
+  });
+});
