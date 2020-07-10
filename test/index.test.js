@@ -1,5 +1,6 @@
 // test here
-const helpers = require("./helpers");
+const sinon = require("sinon");
+const { assert } = require("chai");
 
 describe("First exercise Sintax errors", () => {
   describe("addNumbers function should return the sume of the 3 given numbers", () => {
@@ -70,6 +71,21 @@ describe("Four exercise Calculate Taxes", () => {
       let mySpy = chai.spy.on(window, "calculateSalesTax");
       formatCurrency(15);
       expect(mySpy).to.have.been.called();
+    });
+  });
+
+  describe("Fifth exercise Magic 8 Ball", () => {
+    describe("shakeball function", () => {
+      it("should console log 'The ball has shaken!'", () => {
+        let spy = sinon.spy(console, "log");
+        shakeBall();
+        assert(spy.calledWith("The ball has shaken!"));
+        spy.restore();
+      });
+      test('should return one random answer', () => {
+        
+      })
+      
     });
   });
 });
